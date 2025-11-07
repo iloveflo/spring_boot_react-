@@ -16,11 +16,10 @@ import ChiTietSP from "./pages/chitietsp";
 
 function App() {
   return (
-    
-   <>
      <Router>
+      <div className="min-h-screen flex flex-col">
         <Header/>
-      
+        <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -33,14 +32,12 @@ function App() {
          {/* Các trang từ nút riêng trong Header */}
           <Route path="/giohang" element={<GioHang />} />
           <Route path="/taikhoan" element={<TaiKhoan />} />
-
           <Route path="/chitietsp/:id" element={<ChiTietSP/>}/>
-          
         </Routes>
-        
-       </Router>
+        </main>
         <Footer/>
-    </>
+      </div>
+    </Router>
   );
 }
 
